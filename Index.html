@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timeless Treasures Kenya</title>
+</head>
+<body>
+
+<nav>
+  <b>Timeless Treasures Kenya</b>
+  <a href="#">Home</a>
+  <a href="#">Auctions</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+  <h1>Welcome to Timeless Treasures Kenya</h1>
+  <p>Based in Nairobi, Kenya, we source old and beautiful antique items from all over the world. From Europe to Asia, bid on your favourite piece before time runs out.</p>
+  <button>See Auctions</button>
+</div>
+
+<h2>Current Auctions in Kenya</h2>
+
+<div class="cards">
+  <div class="card stool-card">
+    <img src="stool.jpg" alt="Victorian Wooden Stool">
+    <h3>Victorian Wooden Stool</h3>
+    <p>Sourced from: England, Europe | Year: 1890</p>
+    <p>A beautiful wooden stool from the Victorian era in England.</p>
+    <p><b>Price: KES <span>450,000</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+
+  <div class="card pocketwatch-card">
+    <img src="pocketwatch.jpeg" alt="Brass Pocket Watch">
+    <h3>Brass Pocket Watch</h3>
+    <p>Sourced from: Switzerland, Europe | Year: 1920</p>
+    <p>An old brass pocket watch that still works well.</p>
+    <p><b>Price: KES <span>3,200,000</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+
+  <div class="card cup-card">
+    <img src="cup.jpeg" alt="Porcelain Tea Cup">
+    <h3>Porcelain Tea Cup</h3>
+    <p>Sourced from: England, Europe | Year: 1885</p>
+    <p>A fine porcelain tea cup with hand painted flowers.</p>
+    <p><b>Price: KES <span>680,000</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+
+  <div class="card necklace-card">
+    <img src="necklace.jpeg" alt="Antique Pearl Necklace">
+    <h3>Antique Pearl Necklace</h3>
+    <p>Sourced from: France, Europe | Year: 1910</p>
+    <p>A classic pearl necklace from old Paris fashion.</p>
+    <p><b>Price: KES <span>22,000,000</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+
+  <div class="card clock-card">
+    <img src="clock.jpeg" alt="Antique Wall Clock">
+    <h3>Antique Wall Clock</h3>
+    <p>Sourced from: Germany, Europe | Year: 1905</p>
+    <p>An old wall clock with a loud tick from Germany.</p>
+    <p><b>Price: KES <span>899,900</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+
+  <div class="card cloth-card">
+    <img src="cloth.jpg" alt="Antique Lace Table Cloth">
+    <h3>Antique Lace Table Cloth</h3>
+    <p>Sourced from: Italy, Europe | Year: 1875</p>
+    <p>A delicate lace table cloth handmade in Italy.</p>
+    <p><b>Price: KES <span>710,000</span></b></p>
+    <button onclick="placeBid(this)">Place Bid</button>
+  </div>
+</div>
+
+<div class="about">
+  <h2>About Us</h2>
+  <p>Timeless Treasures Kenya is a small auction website based in Nairobi. We source antique items from around the world, from London to Paris to Rome, and sell them here in Kenya so you can bid on them.</p>
+</div>
+
+<div class="contact">
+  <h2>Contact Us</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="text" placeholder="Your Email">
+  <input type="text" placeholder="Your Message">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<footer>
+  <p>Timeless Treasures Kenya &copy; 2026</p>
+</footer>
+
+<script>
+function placeBid(button) {
+  var price = button.parentElement.querySelector("span");
+  var newPrice = Number(price.textContent) + 1000;
+  price.textContent = newPrice;
+  button.textContent = "Bid Placed!";
+}
+function sendMessage() {
+  alert("Thanks for your message!");
+}
+
+
+
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #faf3e8;
+  color: #333;
+  margin: 0;
+}
+nav {
+  background-color: #8b5a2b;
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+.hero button {
+  background-color: #8b5a2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-top: #333;
+  
+}
+h2 {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+}
+.stool-card {
+  border-top: 5px solid #8b5a2b;
+}
+.pocketwatch-card {
+  border-top: 5px solid #b5892e;
+}
+.cup-card {
+  border-top: 5px solid #a0522d;
+}
+.necklace-card {
+  border-top: 5px solid #c0392b;
+}
+.clock-card {
+  border-top: 5px solid #2e6b62;
+}
+.cloth-card {
+  border-top: 5px solid #cc0000;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card button {
+  background-color: #8b5a2b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.about {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+.contact input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
+.contact button {
+  background-color: #8b5a2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background-color: #8b5a2b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
